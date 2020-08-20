@@ -1,0 +1,4 @@
+RewriteCond %{REQUEST_URI} ^/([^\.]+)/
+RewriteRule ^ - [E=SUBDIR:%1]
+ErrorDocument 404 /%{reqenv:SUBDIR}/404.html
+
